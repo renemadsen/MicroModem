@@ -1,0 +1,20 @@
+install usb-modeswitch
+
+in /etc/usb_modeswitch.conf insert
+
+########################################################
+# Huawei E1752
+#
+# Contributor: 
+
+DefaultVendor=  0x12d1
+DefaultProduct= 0x1446
+
+TargetVendor=	0x12d1
+TargetProdct=	0x1001
+
+MessageEndpoint=	0x01
+
+MessageContent=	"55534243000000000000000000000011060000000000000000000000000000"
+
+run usb_modeswitch
