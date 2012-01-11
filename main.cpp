@@ -10,16 +10,27 @@
 #include <stdio.h>   /* Standard input/output definitions */
 #include <stdlib.h>
 #include <string.h>  /* String function definitions */
-#include <unistd.h>  /* UNIX standard function definitions */
 #include <fcntl.h>   /* File control definitions */
-#include <errno.h>   /* Error number definitions */
 #include <termios.h> /* POSIX terminal control definitions */
 
 int main(int argc, char* argv[])
 {
 	int i, n, fd = 0, arg_number = 1;
 
+	struct termios tio;
+	memset(&tio,0,sizeof(tio));
+	tio.c_iflag=0;
+	tio.c_oflag=0;
+	tio.c_cflag=CS8|CREAD|CLOCAL;           // 8n1, see termios.h for more information
+	tio.c_lflag=0;
+	tio.c_cc[VMIN]=1;
+	tio.c_cc[VTIME]=5;
+
+
 	fd = open("/dev/ttyUSB0", O_RDWR | O_SYNC);
+
+	tcsetattr(fd, TCSANOW, &tio);
+
 	n = write(fd, "AT\r\n", 4);
 	sleep(1);
 	n = write(fd, "AT+CMGF=1\r\n", 11);
