@@ -19,6 +19,6 @@ Install the following package for building the debian package
 
 Howto build
 -----------
-	cd debian_package/micromodem-1.0
-	debuild -us -uc
+	cd Releases
+	make deb
 

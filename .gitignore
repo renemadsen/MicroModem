@@ -9,3 +9,4 @@ micromodem*deb
 micromodem*build
 micromodem*changes
 micromodem*dsc
+micromodem_*.diff.gz

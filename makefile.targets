@@ -1,3 +1,6 @@
 install: MicroModem
 	mkdir -p $(DESTDIR)/usr/bin
 	install ./MicroModem $(DESTDIR)/usr/bin/MicroModem
+
+deb: MicroModem
+	cd ..;tar -zcf micromodem_1.0.orig.tar.gz Release/;cd debian_package/micromodem-1.0;debuild -us -uc
