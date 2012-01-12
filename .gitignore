@@ -2,3 +2,10 @@
 *.d
 Debug/MicroModem
 Debug/spool_folder
+debian_control/micromodem/*
+Release/MicroModem
+micromodem*tar.gz
+micromodem*deb
+micromodem*build
+micromodem*changes
+micromodem*dsc
