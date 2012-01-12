@@ -1,0 +1,9 @@
+Package: micromodem
+Version: 1.0-1
+Architecture: amd64
+Maintainer: Martin Jensby <mj@microting.dk>
+Installed-Size: 44
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
+Section: misc
+Priority: optional
+Description: MicroModem a tool to send sms using a HUAWEI 3G Modem

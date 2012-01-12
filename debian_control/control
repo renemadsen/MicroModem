@@ -1,0 +1,11 @@
+Source: micromodem
+Maintainer: Martin Jensby <mj@microting.dk>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.0
+Build-Depends: debhelper (>= 7.3.8)
+
+Package: micromodem
+Architecture: i386 amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: MicroModem a tool to send sms using a HUAWEI 3G Modem

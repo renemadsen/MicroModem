@@ -1,0 +1,3 @@
+install: MicroModem
+	mkdir -p $(DESTDIR)/usr/bin
+	install ./MicroModem $(DESTDIR)/usr/bin/MicroModem
